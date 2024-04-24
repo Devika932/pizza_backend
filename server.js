@@ -10,12 +10,9 @@ const pizzasRoute = require('./routes/pizzasRoute')
 const userRoute = require('./routes/userRoute')
 const ordersRoute = require('./routes/ordersRoute')
 
-
-
-
-app.use("/",(req,res)=>{
-    res.send("server running...")
-})
+ // app.use("/",(req,res)=>{
+    //     res.send("server running...")
+    // })
 app.use('/api/pizzas/', pizzasRoute)
 app.use('/api/users/' , userRoute)
 app.use('/api/orders/' , ordersRoute)
