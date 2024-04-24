@@ -10,9 +10,7 @@ const pizzasRoute = require('./routes/pizzasRoute')
 const userRoute = require('./routes/userRoute')
 const ordersRoute = require('./routes/ordersRoute')
 
-//  app.use("/",(req,res)=>{
-//         res.send("server running...")
-//     })
+
 app.use('/api/pizzas/', pizzasRoute)
 app.use('/api/users/' , userRoute)
 app.use('/api/orders/' , ordersRoute)
@@ -29,10 +27,9 @@ if(process.env.NODE_ENV ==='production')
     })
 }
 
-
-
-
-
+app.get('/', (req, res) => {
+    res.send('Server is running');
+});
 
 const port = process.env.PORT || 8000;
 
